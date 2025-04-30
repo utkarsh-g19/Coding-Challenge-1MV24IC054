@@ -1,0 +1,67 @@
+class Solution {
+public:
+    int minOperations(vector<int>& nums, int k) {
+        int sum=accumulate(nums.begin(),nums.end(),0);
+        return sum%k;
+    }
+};
+
+class Solution {
+public:
+    void reverseString(vector<char>& s) {
+        reverse(s.begin(),s.end());
+    }
+};
+
+class Solution {
+public:
+    vector<bool> kidsWithCandies(vector<int>& candies, int extraCandies) {
+        int highest=*(max_element(candies.begin(),candies.end()));
+        int n = candies.size();
+        vector<bool> arr(n);
+        int i=0;
+        for(int candy:candies)
+        {
+           
+            if(candy + extraCandies >=highest)
+            {
+                arr[i]=true;
+            }
+            else
+            {
+                arr[i]=false;
+            }
+            i++;
+        }
+        return arr;
+    }
+};
+
+class Solution {
+public:
+    int smallestEvenMultiple(int n) {
+        if(n%2==0)
+        {
+            return n;
+        }
+        else
+        {
+            return n*2;
+        }
+    }
+};
+
+class Solution {
+public:
+    vector<int> runningSum(vector<int>& nums) {
+        for (int i = 1; i < nums.size(); i++) {
+            nums[i]=nums[i-1] + nums[i];
+        }
+        return nums;
+    }
+    
+};
+
+var argumentsLength = function(...args) {
+    return args.length;
+};
